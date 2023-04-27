@@ -1,17 +1,19 @@
-
-import { alpha, AppBar, Box, Container, IconButton, InputBase, Paper, styled, Toolbar, Typography } from '@mui/material';
+import React from 'react';
+import { AppBar, Box, Container, IconButton, Paper, Toolbar, Typography } from '@mui/material';
 import { Link, Outlet } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import getAddressTitle from '../utils/getTitle';
 
-function AppWrapper() {
+interface AppWrapperProps { }
+
+function AppWrapper({ }: AppWrapperProps) {
   const title = getAddressTitle(document.location.href);
 
   return (
     <>
       <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="static" sx={{ backgroundColor: "#FFF"}}>
+        <AppBar position="static" sx={{ backgroundColor: "#FFF" }}>
           <Toolbar>
             <IconButton
               size="large"
@@ -28,7 +30,7 @@ function AppWrapper() {
         </AppBar>
       </Box>
       <Container>
-        <Paper sx={{p: 3, m: 3}}>
+        <Paper sx={{ p: 3, m: 3 }}>
           <Outlet />
         </Paper>
       </Container>

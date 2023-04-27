@@ -1,5 +1,5 @@
 import { injectable } from "inversify";
-import mockData from "./mockData.json";
+import mockData from "../mocks/mockData.json"
 
 export interface ApiResponseType {
   /**
@@ -14,12 +14,13 @@ export interface ApiResponseType {
 
 export interface ApiServiceType {
   get: () => Promise<ApiResponseType>;
+  filtered: (value: string, param: string) => Promise<ApiResponseType>;
 }
 
 @injectable()
 export default class ApiService implements ApiServiceType {
   private static instance: ApiService;
-  
+
   static get initialized(): ApiService {
     if (!ApiService.instance) {
       this.instance = new ApiService();

@@ -6,6 +6,7 @@ import {
   StyledEngineProvider,
   ThemeProvider
 } from "@mui/material";
+import ErrorBoundary from "../components/ErrorBoundary";
 
 const theme = createTheme({
   palette: {
@@ -18,10 +19,12 @@ const theme = createTheme({
 export default function BootstrapApp(): ReactElement {
   return (
     <StyledEngineProvider injectFirst>
+      <ErrorBoundary>
         <ThemeProvider theme={theme}>
           <CssBaseline />
           <RoutesProvider />
         </ThemeProvider>
+      </ErrorBoundary>
     </StyledEngineProvider>
   );
-}
+};

@@ -61,6 +61,9 @@ exports[`SearchPage should render 1`] = `
             />
           </button>
         </div>
+        <div
+          class="MuiBox-root css-1yuhvjn"
+        />
       </div>
       <div
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-md-8 css-am41oj-MuiGrid-root"
@@ -74,9 +77,11 @@ exports[`SearchPage should render 1`] = `
             Search results
           </h5>
         </div>
-        <ul
-          class="MuiList-root MuiList-padding css-h4y409-MuiList-root"
-        />
+        <div
+          class="MuiBox-root css-0"
+        >
+          No results
+        </div>
       </div>
     </div>
   </div>
