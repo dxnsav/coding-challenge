@@ -4,7 +4,7 @@ import SectionDescription from "../../components/SectionDescription";
 import SectionHeader from "../../components/SectionHeader";
 import SectionStack from "../../components/SectionStack";
 
-const Home: React.FC = (): ReactElement => {
+function Home(): ReactElement {
   return (
     <SectionStack>
       <SectionHeader>Web Developer - Interview assignment</SectionHeader>

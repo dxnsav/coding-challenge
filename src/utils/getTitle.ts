@@ -1,7 +1,7 @@
-const getAddressTitle = (address: string): string => {
+const getAddressTitle = (): string => {
   const path = document.location.href;
 
-  return address.split('/').pop() || '';
+  return path.split('/').pop() || '';
 };
 
 export default getAddressTitle;

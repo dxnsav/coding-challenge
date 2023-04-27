@@ -8,7 +8,7 @@ import getAddressTitle from '../utils/getTitle';
 interface AppWrapperProps { }
 
 function AppWrapper({ }: AppWrapperProps) {
-  const title = getAddressTitle(document.location.href);
+  const title = getAddressTitle();
 
   return (
     <>
