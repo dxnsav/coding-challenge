@@ -1,5 +1,7 @@
 # Coding challenge
 
+[Changes](/Changes.md)
+
 ## Assignment 
 
 A college student has worked on this project, but the outcome is of a questionable quality.
